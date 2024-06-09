@@ -1,0 +1,19 @@
+[window]
+opacity = 0.8
+blur = true
+padding = { x = 0, y = 2}
+dynamic_padding = true
+[colors.cursor]
+cursor = "#c4dde7"
+text = "0x111111"
+[colors.primary]
+background = "#020D11"
+foreground = "#c4dde7"
+
+[cursor]
+style = {shape = "Underline", blinking = "On" }
+unfocused_hollow = false
+[font]
+normal = { family = "Jetbrains Mono", style = "normal" }
+size = 14.00
+offset = { x = 0, y = 0 }
