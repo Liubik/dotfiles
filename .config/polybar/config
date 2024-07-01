@@ -39,7 +39,7 @@ width = 100%
 height = 30pt
 radius = 10
 bottom = true
-
+monitor = ${env:MONITOR:}
 ; dpi = 96
 
 background = ${colors.tpBackGround}
@@ -60,11 +60,10 @@ separator-foreground = ${colors.disabled}
 
 font-0 = JetBrains Mono:style=Medium:pixelsize=12;1
 font-1 = JetBrainsMono Nerd Font:pixelsize=12;1
-font-2 = fixed:pixelsize=10;1
-font-3 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-4 = siji:pixelsize=10;1
-
-modules-left = xwindow date now-playing cava 
+font-2 = Font Awesome 6 Free:pixelsize=12;2
+font-3 = Font Awesome 6 Free Solid:pixelsize=12;2
+font-4 = Font Awesome 6 Brands:pixelsize=12;2
+modules-left = power window date now-playing cava 
 modules-center = xworkspaces
 modules-right = filesystem pulseaudio xkeyboard memory cpu wlan
 
@@ -78,6 +77,11 @@ enable-ipc = true
 ; wm-restack = i3
 
 ; override-redirect = true
+
+[module/power]
+type = custom/text
+content = %{F#349BC5}%{F-}
+click-left = exec ~/.config/rofi/powermenu/type-2/powermenu.sh
 
 [module/systray]
 type = internal/tray
