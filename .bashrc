@@ -58,6 +58,8 @@ fi
 
 if [ "$color_prompt" = yes ]; then
     PS1='~ '
+    PS1='\[[36m\]${debian_chroot:+($debian_chroot)}\u\w❯ \[[0m\]'
+
 else
     PS1=' \[[36m\]~ \[[32m\]❯\[[0m\]'
     PS1='\[[36m\]${debian_chroot:+($debian_chroot)}\u\w❯ \[[0m\]'
@@ -135,7 +137,7 @@ alias anime="ani-cli"
 alias conf="vim ~/.config/i3/config"
 alias bash="vim ~/.bashrc"
 alias l="lsd -al"
-alias ls="lsd -al"
+#alias ls="lsd -al"
 alias lsd="lsd -al"
 alias kconf="vim ~/.config/kitty/kitty.conf"
 alias restart="sudo reboot"
@@ -152,6 +154,13 @@ alias bruh='fuck'
 alias sigma="~/Programs/eDEX-UI-Linux-x86_64.AppImage --disable-gpu-sandbox --nointro"
 alias findit="~/scripts/find.sh"
 alias fzf="~/scripts/fzf_root.sh"
+alias aconf="vim ~/.config/alacritty/alacritty.toml"
+alias alacritty="~/bruh/alacritty/alacritty"
+alias ts3="nohup ~/servers/teamspeak3-server_linux_amd64/ts3server &"
+alias terraria="~/.local/share/Steam/steamapps/common/tModLoader/start-tModLoaderServer.sh"
+alias fastfetch="fastfetch -l ~/Documents/sumthn.txt -c ~/.config/fastfetch/config.json"
 . "$HOME/.cargo/env"
 eval "$(thefuck --alias)"
 . /usr/share/autojump/autojump.sh
+#fortune | cowsay -pn
+hello | cowsay -pn
